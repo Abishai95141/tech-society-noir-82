@@ -73,7 +73,7 @@ export default function Navbar() {
     `${isActive ? "text-foreground" : "text-muted-foreground"} hover:text-foreground transition-colors`;
 
   return (
-    <header className="sticky top-0 z-40 bg-transparent border-b-0">
+    <header className="sticky top-0 z-40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/80 border-b">
       <nav className="max-w-[1200px] mx-auto px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-6">
           <Link to="/" className="font-extrabold tracking-tight text-lg">

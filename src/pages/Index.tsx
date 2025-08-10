@@ -63,7 +63,7 @@ export default function Index() {
           <div className="absolute inset-0 bg-center bg-cover" style={{ backgroundImage: "url('/placeholder.svg')" }} />
           {/* Spline embed (lazy) */}
           {showSpline && !reducedMotion && (
-            <div className="absolute inset-0 origin-[50%_100%] scale-[1.08] translate-y-[28px] md:scale-[1.20] md:translate-y-[44px] xl:scale-[1.30] xl:translate-y-[60px]">
+            <div className="absolute inset-0 origin-[50%_100%] scale-[1.12] translate-y-[40px] md:scale-[1.25] md:translate-y-[56px] xl:scale-[1.35] xl:translate-y-[72px]">
               <spline-viewer
                 url="https://prod.spline.design/cHtCkE-h4TAM0pqI/scene.splinecode"
                 style={{ width: '100%', height: '100%' }}
@@ -75,7 +75,7 @@ export default function Index() {
         </div>
 
         {/* Layer 2: Content overlay */}
-        <div className="relative z-10 max-w-[1200px] mx-auto px-6 h-full flex flex-col justify-center pointer-events-none translate-y-[8vh] md:translate-y-[12vh]">
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 h-full flex flex-col justify-center pointer-events-none translate-y-[2vh] md:translate-y-[4vh]">
           <h1 className="sr-only">TechSociety</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 items-end gap-2">
@@ -92,12 +92,14 @@ export default function Index() {
             </div>
           </div>
 
+          <p className="mt-6 text-center text-lg text-muted-foreground">
+            Build together. Learn faster. Ship more.
+          </p>
 
-          <div className="mt-10 md:mt-12 pointer-events-auto">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-              <Button asChild variant="secondary"><a href="/events">Explore Events</a></Button>
-              <Button asChild variant="outline"><a href="/projects">See Projects</a></Button>
-            </div>
+          <div className="mt-10 md:mt-12 flex items-center justify-center gap-3 pointer-events-auto">
+            <Button asChild><a href="/register">Join TechSociety</a></Button>
+            <Button asChild variant="secondary"><a href="/events">Explore Events</a></Button>
+            <Button asChild variant="outline"><a href="/projects">See Projects</a></Button>
           </div>
 
           <div className={`mt-8 flex justify-center transition-opacity duration-700 ${hasInteracted ? 'opacity-0' : 'opacity-100'}`}>
