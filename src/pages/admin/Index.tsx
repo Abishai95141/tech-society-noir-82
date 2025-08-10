@@ -72,9 +72,11 @@ export default function AdminIndex() {
         <Card><CardHeader><CardTitle>Projects</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{stats.projects}</CardContent></Card>
         <Card><CardHeader><CardTitle>Events</CardTitle></CardHeader><CardContent className="text-3xl font-semibold">{stats.events}</CardContent></Card>
       </div>
-      <div className="flex gap-3 mb-8">
+      <div className="flex flex-wrap gap-3 mb-8">
         <Button onClick={() => navigate('/admin/approvals')}>Manage Approvals</Button>
         <Button variant="secondary" onClick={() => navigate('/admin/roles')}>Manage Roles</Button>
+        <Button variant="outline" onClick={() => navigate('/admin/projects')}>Manage Projects</Button>
+        <Button variant="outline" onClick={() => navigate('/admin/events')}>Manage Events</Button>
       </div>
 
       <section aria-labelledby="all-projects-heading" className="space-y-4">
